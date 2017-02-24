@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+    <title> Mean belt </title>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+    <script  src='app.js'></script>
+    <script src='./controllers/users.js'></script>
+    <script src='./controllers/items.js'></script>
+    <script src='./factories/users.js'></script>
+    <script src='./factories/items.js'></script>
+<style>
+        table, tr,th{
+            border: 1px solid blue;
+        }
+        button{
+            background-color: darkgray;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div ng-view>
+    </div>
+</body>
+</html>

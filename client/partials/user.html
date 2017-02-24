@@ -1,0 +1,14 @@
+<div ng-controller="userController">
+    <a href="#/dash">Home</a> <a href="" ng-click = "logout()">Logout</a>
+</div>
+<div ng-controller = "itemController">
+    
+    <h1>{{my_user}} bucket list </h1>
+    <h1> Completed </h1>
+    <p ng-repeat="item in complete"> <a href="" ng-click = "changeStatus(item)">Change Status</a> {{item.creator}} {{item.title}} - {{item.description}} {{item.created_at |date : longDate}} 
+    <h1> Pending</h1>
+  
+        <p ng-repeat="item in user_items"> <a href="" ng-click = "changeStatus(item)">Change Status</a> {{item.creator}} {{item.title}} - {{item.description}} {{item.created_at |date : longDate}} 
+        
+         </p>
+    </div>

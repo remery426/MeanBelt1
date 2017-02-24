@@ -1,0 +1,20 @@
+<div ng-controller="userController"> 
+    <a href="#/dash">Home</a> <a href="" ng-click = "logout()">Logout</a>
+    <h1> Welcome to the Bucket List {{current_user.name}}</h1>
+      </div>
+      <div ng-controller="itemController">
+        <form ng-submit="addItem()">
+            Title: <input type="text" ng-model = "newItem.title" placeholder="Title">
+           Description: <input type="text" ng-model="newItem.description" placeholder="Description">
+            <select ng-model="newItem.user" >
+                <option ng-repeat="user in all_users">{{user.name}}</option>
+            </select>
+            <input type="submit">
+        </form>
+        <h2> Items in your bucket list </h2>
+            <p ng-repeat="item in my_items"> <a href="" ng-click = "changeStatus(item)">Change Status</a> {{item.creator}} {{item.title}} - {{item.description}} {{item.status}} {{item.created_at |date : longDate}} 
+            <h3> View other users bucketlist </h3>
+            <ul>
+                <li ng_repeat = "user in all_users"> <a href="#/user/{{user.name}}">{{user.name}}</a></li>
+                    </ul>
+        </div>
